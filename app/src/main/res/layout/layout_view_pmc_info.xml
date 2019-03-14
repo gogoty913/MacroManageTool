@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:id="@+id/nickNameTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/nickNameTag"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/nickNameTag"
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/nickName"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:ems="10"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/nickNameTag"
+                    app:layout_constraintStart_toEndOf="@+id/nickNameTag" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/calorieTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/calorieTag"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/calorieTag"
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/calorie"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:ems="10"
+                    app:layout_constraintBottom_toBottomOf="@+id/calorieTag"
+                    app:layout_constraintStart_toEndOf="@+id/calorieTag" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/carbohydratesTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/carbohydratesTag"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/carbohydrateTag"
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/carbohydrates"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:ems="10"
+                    app:layout_constraintBottom_toBottomOf="@+id/carbohydratesTag"
+                    app:layout_constraintStart_toEndOf="@+id/carbohydratesTag" />
+
+                <TextView
+                    android:id="@+id/carbohydrates_g"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/gram"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/carbohydrates"
+                    app:layout_constraintStart_toEndOf="@+id/carbohydrates" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </TableRow>
+        <TableRow
+            android:id="@+id/proteinTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/proteinTag"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="@string/proteinTag"
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/protein"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:ems="10"
+                    app:layout_constraintBottom_toBottomOf="@+id/proteinTag"
+                    app:layout_constraintStart_toEndOf="@+id/proteinTag" />
+
+                <TextView
+                    android:id="@+id/_g"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/gram"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/protein"
+                    app:layout_constraintStart_toEndOf="@+id/protein" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </TableRow>
+        <TableRow
+            android:id="@+id/lipidTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/lipidTag"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="@string/lipidTag"
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lipid"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:ems="10"
+                    app:layout_constraintBottom_toBottomOf="@+id/lipidTag"
+                    app:layout_constraintStart_toEndOf="@+id/lipidTag" />
+
+                <TextView
+                    android:id="@+id/lipid_g"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/gram"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/lipid"
+                    app:layout_constraintStart_toEndOf="@+id/lipid" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>

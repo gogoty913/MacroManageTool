@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MacroManageTool</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="gram">g</string>
+    <string name="percent">%</string>
+    <string name="kilocalorie">kcal</string>
+    <string name="foodNameTag">たべもの名前</string>
+    <string name="calorieTag">カロリー</string>
+    <string name="lipidTag">脂質</string>
+    <string name="proteinTag">たんぱく質</string>
+    <string name="carbohydrateTag">炭水化物</string>
+    <string name="displayCapacityTag">容量(xxxg)</string>
+    <string name="allCapacityTag">内容量</string>
+    <string name="futureStyle">ふゅーちゃースタイル</string>
+    <string name="insertText">登録</string>
+    <string name="updateText">更新</string>
+    <string name="selectText">参照</string>
+    <string name="idTag">ID:</string>
+    <string name="insertEatAndFoodData">食べた物と\n食べ物図鑑に登録</string>
+    <string name="insertFoodData">食べ物図鑑に登録</string>
+    <string name="insertEatData">食べた物登録</string>
+    <string name="eatValuePercentTag">食べた量(%)</string>
+    <string name="eatValueGramTag">食べた量(g)</string>
+    <string name="dialog_title">DBアクセス中</string>
+    <string name="wait_moment">しばらくお待ちください</string>
+
+</resources>

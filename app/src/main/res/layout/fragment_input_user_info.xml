@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".InputUserInfoFragment">
+
+    <include
+        android:id="@+id/inputUserElements"
+        layout="@layout/layout_input_user_elements"
+        android:name="com.gmail.gogoty913.macromanagetool.InputUserElementFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <include
+        android:id="@+id/layoutButtonUser"
+        layout="@layout/layout_insert_user_button"
+        app:layout_constraintTop_toTopOf="@id/inputUserElements"
+        app:layout_constraintLeft_toLeftOf="@id/inputUserElements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

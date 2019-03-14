@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:id="@+id/nickNameTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/nickNameTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/nickNameTag" />
+
+                        <EditText
+                            android:id="@+id/nickName"
+                            android:layout_width="240dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:text="ニックネーム"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/nickNameTag"
+                            app:layout_constraintStart_toEndOf="@+id/nickNameTag"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/genderStyleTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/genderStyleTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/genderStyleTag" />
+
+                        <EditText
+                            android:id="@+id/genderStyle"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:text="200"
+                            app:layout_constraintBottom_toBottomOf="@+id/genderStyleTag"
+                            app:layout_constraintStart_toEndOf="@+id/genderStyleTag"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/ageTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/ageTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/ageTag" />
+
+                        <EditText
+                            android:id="@+id/age"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:text="22"
+                            app:layout_constraintBottom_toBottomOf="@+id/ageTag"
+                            app:layout_constraintStart_toEndOf="@+id/ageTag"
+                            />
+
+                        <TextView
+                            android:id="@+id/age_g"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/age"
+                            app:layout_constraintStart_toEndOf="@+id/age"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/age" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/weightTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/weightTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/weightTag" />
+
+                        <EditText
+                            android:id="@+id/weight"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:text="60"
+                            app:layout_constraintBottom_toBottomOf="@+id/weightTag"
+                            app:layout_constraintStart_toEndOf="@+id/weightTag"
+                            />
+
+                        <TextView
+                            android:id="@+id/weight_g"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/weight"
+                            app:layout_constraintStart_toEndOf="@+id/weight"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/kilogram" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/heightTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/heightTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/heightTag" />
+                        <EditText
+                            android:id="@+id/height"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:text="175"
+                            app:layout_constraintBottom_toBottomOf="@+id/heightTag"
+                            app:layout_constraintStart_toEndOf="@+id/heightTag" />
+                        <TextView
+                            android:id="@+id/height_g"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/height"
+                            app:layout_constraintStart_toEndOf="@+id/height"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/centimeter" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activityValueTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/activityValueTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/activityValueTag" />
+                        <EditText
+                            android:id="@+id/activityValue"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:text="10"
+                            app:layout_constraintBottom_toBottomOf="@+id/activityValueTag"
+                            app:layout_constraintStart_toEndOf="@+id/activityValueTag" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/aimTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/aimTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/aimTag" />
+                        <EditText
+                            android:id="@+id/aim"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:text="10"
+                            app:layout_constraintBottom_toBottomOf="@+id/aimTag"
+                            app:layout_constraintStart_toEndOf="@+id/aimTag" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

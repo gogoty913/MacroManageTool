@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:id="@+id/foodNameTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/foodNameTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/foodNameTag" />
+
+                        <EditText
+                            android:id="@+id/foodName"
+                            android:layout_width="240dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:text="セブン　鮭おにぎり"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/foodNameTag"
+                            app:layout_constraintStart_toEndOf="@+id/foodNameTag"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/calorieTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calorieTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/calorieTag" />
+
+                        <EditText
+                            android:id="@+id/calorie"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:text="200"
+                            app:layout_constraintBottom_toBottomOf="@+id/calorieTag"
+                            app:layout_constraintStart_toEndOf="@+id/calorieTag"
+                            />
+
+                        <TextView
+                            android:id="@+id/calorie_kcal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/calorie"
+                            app:layout_constraintStart_toEndOf="@+id/calorie"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/kilocalorie" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/lipidTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/lipidTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/lipidTag" />
+
+                        <EditText
+                            android:id="@+id/lipid"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:text="10"
+                            app:layout_constraintBottom_toBottomOf="@+id/lipidTag"
+                            app:layout_constraintStart_toEndOf="@+id/lipidTag"
+                            />
+
+                        <TextView
+                            android:id="@+id/lipid_g"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/lipid"
+                            app:layout_constraintStart_toEndOf="@+id/lipid"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/gram" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/proteinTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/proteinTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/proteinTag" />
+
+                        <EditText
+                            android:id="@+id/protein"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:text="10"
+                            app:layout_constraintBottom_toBottomOf="@+id/proteinTag"
+                            app:layout_constraintStart_toEndOf="@+id/proteinTag"
+                            />
+
+                        <TextView
+                            android:id="@+id/protein_g"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/protein"
+                            app:layout_constraintStart_toEndOf="@+id/protein"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/gram" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/carbohydrateTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/carbohydrateTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/carbohydrateTag" />
+                        <EditText
+                            android:id="@+id/carbohydrate"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:text="10"
+                            app:layout_constraintBottom_toBottomOf="@+id/carbohydrateTag"
+                            app:layout_constraintStart_toEndOf="@+id/carbohydrateTag" />
+                        <TextView
+                            android:id="@+id/carbohydrate_g"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/carbohydrate"
+                            app:layout_constraintStart_toEndOf="@+id/carbohydrate"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/gram" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/displayCapacityTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/displayCapacityTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/displayCapacityTag" />
+                        <EditText
+                            android:id="@+id/displayCapacity"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:text="10"
+                            app:layout_constraintBottom_toBottomOf="@+id/displayCapacityTag"
+                            app:layout_constraintStart_toEndOf="@+id/displayCapacityTag" />
+                        <TextView
+                            android:id="@+id/displayCapacity_g"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/displayCapacity"
+                            app:layout_constraintStart_toEndOf="@+id/displayCapacity"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/gram" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/allCapacityTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/allCapacityTag"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            app:autoSizeMaxTextSize="18sp"
+                            app:autoSizeMinTextSize="8sp"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/allCapacityTag" />
+                        <EditText
+                            android:id="@+id/allCapacity"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="4dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:text="10"
+                            app:layout_constraintBottom_toBottomOf="@+id/allCapacityTag"
+                            app:layout_constraintStart_toEndOf="@+id/allCapacityTag" />
+                        <TextView
+                            android:id="@+id/allCapacity_g"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/allCapacity"
+                            app:layout_constraintStart_toEndOf="@+id/allCapacity"
+                            style="@style/BaseTextTheme"
+                            android:text="@string/gram" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

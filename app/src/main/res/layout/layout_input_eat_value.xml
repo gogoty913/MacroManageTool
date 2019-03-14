@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/eatValuePercentTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/eatValuePercentTag"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/inputEatValuePercent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/eatValuePercent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/percent"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/eatValueGramTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/eatValueGramTag"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/inputEatValueGram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/eatValueGram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gram"
+        android:layout_weight="1"/>
+
+</LinearLayout>

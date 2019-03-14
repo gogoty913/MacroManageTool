@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nickNameTag">ニックネーム</string>
+    <string name="nickName">ニックネーム</string>
+    <string name="genderStyleTag">GenderStyle</string>
+    <string name="ageTag">年齢</string>
+    <string name="weightTag">体重</string>
+    <string name="heightTag">身長</string>
+    <string name="activityValueTag">活動量</string>
+    <string name="aimTag">目的</string>
+    <string name="age">age</string>
+    <string name="kilogram">kg</string>
+    <string name="centimeter">cm</string>
+</resources>

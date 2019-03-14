@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/lipidTag"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        app:autoSizeMaxTextSize="18sp"
+        app:autoSizeMinTextSize="8sp"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        style="@style/BaseTextTheme"
+        android:text="@string/idTag" />
+
+    <EditText
+        android:id="@+id/barcodeId"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="name or barcodeId" />
+
+    <ImageButton
+        android:id="@+id/searchBarcodeButton"
+        app:layout_constraintBottom_toBottomOf="@+id/selectFoodButton"
+        app:layout_constraintStart_toEndOf="@+id/barcodeId"
+        app:layout_constraintTop_toTopOf="@+id/selectFoodButton"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp" />
+
+    <Button
+        android:id="@+id/selectFoodButton"
+        app:layout_constraintStart_toEndOf="@+id/searchBarcodeButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:text="検索" />
+
+
+</LinearLayout>
