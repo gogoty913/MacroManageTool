@@ -1,6 +1,10 @@
 package com.gmail.gogoty913.macromanagetool.logic;
 
+import com.gmail.gogoty913.macromanagetool.entity.EatFoodInfoHistory;
+import com.gmail.gogoty913.macromanagetool.entity.EatFoodsHistory;
 import com.gmail.gogoty913.macromanagetool.entity.UserInfo;
+
+import java.util.List;
 
 import androidx.annotation.NonNull;
 
@@ -23,8 +27,25 @@ public class PmcLogic {
         return 10 * userInfo.weight + 6.25f * userInfo.height - 5 * userInfo.age + coefficient ;
     }
 
+    /**
+     * 活動代謝の算出
+     * @return
+     */
+    public static float calculateActivityMetabolism(@NonNull UserInfo userInfo){
+
+        // アクティブ度による係数の算出
+        float coefficient = 1.2f;
+        if(userInfo.activeMode == 1){
+            coefficient = 1.55f;
+        } else if (userInfo.activeMode == 2){
+            coefficient = 1.725f;
+        }
+
+        return userInfo.basalMetabolism* coefficient ;
+    }
+
     public static float calculateAllCalorie(@NonNull UserInfo userInfo){
-        // 性別による係数の算出
+        // 目的による係数の算出
         float coefficient = 1;
         if(userInfo.future == 0){
             coefficient = 0.8f;
@@ -48,10 +69,29 @@ public class PmcLogic {
 
     public static void setAimPMC(@NonNull UserInfo userInfo){
         userInfo.basalMetabolism = calculateBasalMetabolism(userInfo);
+        userInfo.activityMetabolism = calculateActivityMetabolism(userInfo);
         userInfo.allCalorie = calculateAllCalorie(userInfo);
         userInfo.aimProtein = calculateAimProtein(userInfo);
         userInfo.aimLipid = calculateAimLipid(userInfo);
         userInfo.aimCarbohydrate = calculateAimCarbohydrate(userInfo);
 
     }
+
+    public static double intakeCalorie(@NonNull List<EatFoodInfoHistory> resultList){
+        return resultList.stream().mapToDouble(u -> u.foodInfo.calorie/u.foodInfo.displayCapacity * (u.eatFoodsHistory.get(0).eatValueGram == 0 ? u.eatFoodsHistory.get(0).eatValuePercent:u.eatFoodsHistory.get(0).eatValueGram/u.foodInfo.allCapacity)).sum();
+    }
+
+    public static double intakeCarbon(@NonNull List<EatFoodInfoHistory> resultList){
+        return resultList.stream().mapToDouble(u -> u.foodInfo.carbohydrate/u.foodInfo.displayCapacity * (u.eatFoodsHistory.get(0).eatValueGram == 0 ? u.eatFoodsHistory.get(0).eatValuePercent:u.eatFoodsHistory.get(0).eatValueGram/u.foodInfo.allCapacity)).sum();
+    }
+
+    public static double intakeProtein(@NonNull List<EatFoodInfoHistory> resultList){
+        return resultList.stream().mapToDouble(u -> u.foodInfo.protein/u.foodInfo.displayCapacity * (u.eatFoodsHistory.get(0).eatValueGram == 0 ? u.eatFoodsHistory.get(0).eatValuePercent:u.eatFoodsHistory.get(0).eatValueGram/u.foodInfo.allCapacity)).sum();
+    }
+
+    public static double intakeLipid(@NonNull List<EatFoodInfoHistory> resultList){
+        return resultList.stream().mapToDouble(u -> u.foodInfo.lipid/u.foodInfo.displayCapacity * (u.eatFoodsHistory.get(0).eatValueGram == 0 ? u.eatFoodsHistory.get(0).eatValuePercent:u.eatFoodsHistory.get(0).eatValueGram/u.foodInfo.displayCapacity)).sum();
+    }
+
+
 }

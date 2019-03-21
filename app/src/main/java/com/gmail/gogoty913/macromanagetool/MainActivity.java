@@ -104,6 +104,14 @@ public class MainActivity extends AppCompatActivity implements MyAppOnFragmentIn
         fragmentTransaction.commit();
     }
 
+    @OnClick(R.id.insertEatFoodButton)
+    void insertEatFoodButton(){
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.replace(R.id.fragmentMainDisplay,InsertEatFoodHistoryFragment.newInstance("",""));
+        fragmentTransaction.commit();
+    }
+
     @OnClick(R.id.selectFoodButton)
     void selectFoodButton(){
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -127,7 +135,4 @@ public class MainActivity extends AppCompatActivity implements MyAppOnFragmentIn
         fragmentTransaction.replace(R.id.fragmentMainDisplay, InputUserInfoFragment.newInstance("", ""));
         fragmentTransaction.commit();
     }
-
-
-
 }

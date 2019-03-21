@@ -27,5 +27,13 @@
     <string name="eatValueGramTag">食べた量(g)</string>
     <string name="dialog_title">DBアクセス中</string>
     <string name="wait_moment">しばらくお待ちください</string>
+    <string name="aimCalorieTag">目標カロリー</string>
+    <string name="aimLipidTag">目標脂質</string>
+    <string name="aimProteinTag">目標たんぱく質</string>
+    <string name="aimCarbohydrateTag">目標炭水化物</string>
+    <string name="intakeCalorieTag">残カロリー</string>
+    <string name="intakeLipidTag">残脂質</string>
+    <string name="intakeProteinTag">残たんぱく質</string>
+    <string name="intakeCarbohydrateTag">残炭水化物</string>
 
 </resources>

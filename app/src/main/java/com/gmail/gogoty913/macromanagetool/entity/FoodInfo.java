@@ -13,6 +13,10 @@ public class FoodInfo {
     @NonNull
     public String barcodeId;
 
+    /** true:barcode, false:original */
+    @ColumnInfo
+    public boolean idFlg;
+
     /** 食べ物名前 */
     @ColumnInfo
     public String foodName;

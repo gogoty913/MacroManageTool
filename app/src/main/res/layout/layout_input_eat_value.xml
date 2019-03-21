@@ -13,6 +13,7 @@
         android:id="@+id/inputEatValuePercent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="100"
         android:layout_weight="1"/>
     <TextView
         android:id="@+id/eatValuePercent"

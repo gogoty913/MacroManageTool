@@ -33,6 +33,10 @@ public class UserInfo {
     @ColumnInfo
     public float basalMetabolism;
 
+    /** 活動代謝量 */
+    @ColumnInfo
+    public float activityMetabolism;
+
     /** アクティブ度 0:low,1:normal, 2:height */
     @ColumnInfo
     public int activeMode;

@@ -47,7 +47,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/calorieTableRow"
+            android:id="@+id/intakeCalorieTableRow"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -56,12 +56,12 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/calorieTag"
+                    android:id="@+id/intakeCalorieTag"
                     style="@style/BaseTextTheme"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="@string/calorieTag"
+                    android:text="@string/intakeCalorieTag"
                     android:textSize="18sp"
                     app:autoSizeMaxTextSize="18sp"
                     app:autoSizeMinTextSize="8sp"
@@ -69,21 +69,21 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/calorie"
+                    android:id="@+id/intakeCalorie"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="4dp"
                     android:ems="10"
-                    app:layout_constraintBottom_toBottomOf="@+id/calorieTag"
-                    app:layout_constraintStart_toEndOf="@+id/calorieTag" />
+                    app:layout_constraintBottom_toBottomOf="@+id/intakeCalorieTag"
+                    app:layout_constraintStart_toEndOf="@+id/intakeCalorieTag" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </TableRow>
 
         <TableRow
-            android:id="@+id/carbohydratesTableRow"
+            android:id="@+id/intakeCarbohydratesTableRow"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -92,7 +92,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/carbohydratesTag"
+                    android:id="@+id/intakeCarbohydratesTag"
                     style="@style/BaseTextTheme"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
@@ -105,29 +105,29 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/carbohydrates"
+                    android:id="@+id/intakeCarbohydrates"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="4dp"
                     android:ems="10"
-                    app:layout_constraintBottom_toBottomOf="@+id/carbohydratesTag"
-                    app:layout_constraintStart_toEndOf="@+id/carbohydratesTag" />
+                    app:layout_constraintBottom_toBottomOf="@+id/intakeCarbohydratesTag"
+                    app:layout_constraintStart_toEndOf="@+id/intakeCarbohydratesTag" />
 
                 <TextView
-                    android:id="@+id/carbohydrates_g"
+                    android:id="@+id/intakeCarbohydrates_g"
                     style="@style/BaseTextTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:text="@string/gram"
                     android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/carbohydrates"
-                    app:layout_constraintStart_toEndOf="@+id/carbohydrates" />
+                    app:layout_constraintBottom_toBottomOf="@+id/intakeCarbohydrates"
+                    app:layout_constraintStart_toEndOf="@+id/intakeCarbohydrates" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </TableRow>
         <TableRow
-            android:id="@+id/proteinTableRow"
+            android:id="@+id/intakeProteinTableRow"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -136,12 +136,12 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/proteinTag"
+                    android:id="@+id/intakeProteinTag"
                     style="@style/BaseTextTheme"
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
                     android:padding="5dp"
-                    android:text="@string/proteinTag"
+                    android:text="@string/intakeProteinTag"
                     android:textSize="18sp"
                     app:autoSizeMaxTextSize="18sp"
                     app:autoSizeMinTextSize="8sp"
@@ -149,14 +149,202 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/protein"
+                    android:id="@+id/intakeProtein"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="4dp"
                     android:ems="10"
-                    app:layout_constraintBottom_toBottomOf="@+id/proteinTag"
-                    app:layout_constraintStart_toEndOf="@+id/proteinTag" />
+                    app:layout_constraintBottom_toBottomOf="@+id/intakeProteinTag"
+                    app:layout_constraintStart_toEndOf="@+id/intakeProteinTag" />
+
+                <TextView
+                    android:id="@+id/intakeProtein_g"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/gram"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/intakeProtein"
+                    app:layout_constraintStart_toEndOf="@+id/intakeProtein" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </TableRow>
+        <TableRow
+            android:id="@+id/intakeLipidTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/intakeLipidTag"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="@string/intakeLipidTag"
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/intakeLipid"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:ems="10"
+                    app:layout_constraintBottom_toBottomOf="@+id/intakeLipidTag"
+                    app:layout_constraintStart_toEndOf="@+id/intakeLipidTag" />
+
+                <TextView
+                    android:id="@+id/intakeLipid_g"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/gram"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/intakeLipid"
+                    app:layout_constraintStart_toEndOf="@+id/intakeLipid" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/nullTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nullTable"
+                style="@style/BaseTextTheme"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="18sp"
+                app:autoSizeMaxTextSize="18sp"
+                app:autoSizeMinTextSize="8sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/aimCalorieTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/aimCalorieTag"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/aimCalorieTag"
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/aimCalorie"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:ems="10"
+                    app:layout_constraintBottom_toBottomOf="@+id/aimCalorieTag"
+                    app:layout_constraintStart_toEndOf="@+id/aimCalorieTag" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/aimCarbohydratesTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/aimCarbohydratesTag"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/carbohydrateTag"
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/aimCarbohydrates"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:ems="10"
+                    app:layout_constraintBottom_toBottomOf="@+id/aimCarbohydratesTag"
+                    app:layout_constraintStart_toEndOf="@+id/aimCarbohydratesTag" />
+
+                <TextView
+                    android:id="@+id/aimCarbohydrates_g"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/gram"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/aimCarbohydrates"
+                    app:layout_constraintStart_toEndOf="@+id/aimCarbohydrates" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </TableRow>
+        <TableRow
+            android:id="@+id/aimProteinTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/aimProteinTag"
+                    style="@style/BaseTextTheme"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="@string/aimProteinTag"
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/aimProtein"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:ems="10"
+                    app:layout_constraintBottom_toBottomOf="@+id/aimProteinTag"
+                    app:layout_constraintStart_toEndOf="@+id/aimProteinTag" />
 
                 <TextView
                     android:id="@+id/_g"
@@ -166,12 +354,12 @@
                     android:layout_marginStart="15dp"
                     android:text="@string/gram"
                     android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/protein"
-                    app:layout_constraintStart_toEndOf="@+id/protein" />
+                    app:layout_constraintBottom_toBottomOf="@+id/aimProtein"
+                    app:layout_constraintStart_toEndOf="@+id/aimProtein" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </TableRow>
         <TableRow
-            android:id="@+id/lipidTableRow"
+            android:id="@+id/aimLipidTableRow"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -180,12 +368,12 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/lipidTag"
+                    android:id="@+id/aimLipidTag"
                     style="@style/BaseTextTheme"
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
                     android:padding="5dp"
-                    android:text="@string/lipidTag"
+                    android:text="@string/aimLipidTag"
                     android:textSize="18sp"
                     app:autoSizeMaxTextSize="18sp"
                     app:autoSizeMinTextSize="8sp"
@@ -193,25 +381,25 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/lipid"
+                    android:id="@+id/aimLipid"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="4dp"
                     android:ems="10"
-                    app:layout_constraintBottom_toBottomOf="@+id/lipidTag"
-                    app:layout_constraintStart_toEndOf="@+id/lipidTag" />
+                    app:layout_constraintBottom_toBottomOf="@+id/aimLipidTag"
+                    app:layout_constraintStart_toEndOf="@+id/aimLipidTag" />
 
                 <TextView
-                    android:id="@+id/lipid_g"
+                    android:id="@+id/aimLipid_g"
                     style="@style/BaseTextTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:text="@string/gram"
                     android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/lipid"
-                    app:layout_constraintStart_toEndOf="@+id/lipid" />
+                    app:layout_constraintBottom_toBottomOf="@+id/aimLipid"
+                    app:layout_constraintStart_toEndOf="@+id/aimLipid" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </TableRow>
     </TableLayout>

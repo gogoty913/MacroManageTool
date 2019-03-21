@@ -4,16 +4,22 @@ import java.sql.Time;
 import java.time.LocalDateTime;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.room.ColumnInfo;
+import androidx.room.Embedded;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(primaryKeys = {"userId", "eatDay","eatTime"})
+@Entity(primaryKeys = {"userId", "eatDay","eatTime"},
+        foreignKeys = @ForeignKey(entity = FoodInfo.class,parentColumns = "barcodeId",childColumns = "eatFoodId"),
+        indices = @Index("eatFoodId"))
 public class EatFoodsHistory {
 
     @ColumnInfo
     @NonNull
-    public String userId;
+    public int userId;
 
     /** yyyyMMdd*/
     @ColumnInfo
@@ -26,12 +32,14 @@ public class EatFoodsHistory {
     public String eatTime;
 
     @ColumnInfo
-    public String barcodeId;
+    @NonNull
+    public String eatFoodId;
 
     @ColumnInfo
-    public int eatVolume;
+    @Nullable
+    public int eatValueGram;
 
     @ColumnInfo
-    public int eatPercent;
-
+    @Nullable
+    public int eatValuePercent;
 }

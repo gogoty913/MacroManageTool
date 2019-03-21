@@ -111,6 +111,11 @@ public class InputUserInfoFragment extends Fragment {
         final AsyncTask<Void, Void, UserInfo> asyncTask = new AppAsyncTask<Void, Void, UserInfo>(this.getActivity()) {
             @Override
             protected UserInfo doInBackground(Void... userInfos) {
+
+                if(AppRepository.getInstance(getContext()).getUserInfo() == null){
+
+                }
+
                 return db.userInfoDao().selectAll().get(0);
             }
 
@@ -135,6 +140,7 @@ public class InputUserInfoFragment extends Fragment {
                 //ダサい
                 db.userInfoDao().deleteUserInfo(userInfos[0]);
                 db.userInfoDao().insertUserInfo(userInfos[0]);
+                AppRepository.getInstance(getContext()).setUserInfo(userInfos[0]);
                 return null;
             }
         };
@@ -152,6 +158,7 @@ public class InputUserInfoFragment extends Fragment {
             protected Void doInBackground(UserInfo... userInfos) {
                 //ダサい
                 db.userInfoDao().insertUserInfo(userInfos[0]);
+                AppRepository.getInstance(getContext()).setUserInfo(userInfos[0]);
                 return null;
             }
         };

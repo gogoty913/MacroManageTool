@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".InsertEatFoodHistoryFragment">
+
+    <include
+        android:id="@+id/searchFoodElements"
+        layout="@layout/layout_search_food_id"
+        android:name="com.gmail.gogoty913.macromanagetool.SearchFoodIdFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <include
+        android:id="@+id/inputFoodElements"
+        layout="@layout/layout_view_food_elements"
+        android:name="com.gmail.gogoty913.macromanagetool.InputFoodElements"
+        app:layout_constraintTop_toBottomOf="@id/searchFoodElements"
+        app:layout_constraintLeft_toLeftOf="@id/searchFoodElements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <include
+        android:id="@+id/inputEatValueFood"
+        layout="@layout/layout_input_eat_value"
+        app:layout_constraintTop_toBottomOf="@id/inputFoodElements"
+        app:layout_constraintLeft_toLeftOf="@id/inputFoodElements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <include
+        android:id="@+id/insertEatFood"
+        layout="@layout/layout_insert_food_button"
+        app:layout_constraintTop_toBottomOf="@id/inputEatValueFood"
+        app:layout_constraintLeft_toLeftOf="@id/inputEatValueFood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
