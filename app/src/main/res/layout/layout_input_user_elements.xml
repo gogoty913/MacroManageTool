@@ -86,7 +86,7 @@
                             android:layout_marginTop="4dp"
                             android:ems="10"
                             android:inputType="numberDecimal"
-                            android:text="200"
+                            android:text="1"
                             app:layout_constraintBottom_toBottomOf="@+id/genderStyleTag"
                             app:layout_constraintStart_toEndOf="@+id/genderStyleTag"
                             />
@@ -125,7 +125,7 @@
                             android:layout_marginTop="4dp"
                             android:ems="10"
                             android:inputType="numberDecimal"
-                            android:text="22"
+                            android:text="28"
                             app:layout_constraintBottom_toBottomOf="@+id/ageTag"
                             app:layout_constraintStart_toEndOf="@+id/ageTag"
                             />
@@ -171,7 +171,7 @@
                             android:layout_marginTop="4dp"
                             android:ems="10"
                             android:inputType="numberDecimal"
-                            android:text="60"
+                            android:text="53"
                             app:layout_constraintBottom_toBottomOf="@+id/weightTag"
                             app:layout_constraintStart_toEndOf="@+id/weightTag"
                             />
@@ -218,7 +218,7 @@
                             android:layout_marginTop="4dp"
                             android:ems="10"
                             android:inputType="numberDecimal"
-                            android:text="175"
+                            android:text="163"
                             app:layout_constraintBottom_toBottomOf="@+id/heightTag"
                             app:layout_constraintStart_toEndOf="@+id/heightTag" />
                         <TextView
@@ -262,7 +262,7 @@
                             android:layout_marginTop="4dp"
                             android:ems="10"
                             android:inputType="numberDecimal"
-                            android:text="10"
+                            android:text="1"
                             app:layout_constraintBottom_toBottomOf="@+id/activityValueTag"
                             app:layout_constraintStart_toEndOf="@+id/activityValueTag" />
 
@@ -297,7 +297,7 @@
                             android:layout_marginTop="4dp"
                             android:ems="10"
                             android:inputType="numberDecimal"
-                            android:text="10"
+                            android:text="1"
                             app:layout_constraintBottom_toBottomOf="@+id/aimTag"
                             app:layout_constraintStart_toEndOf="@+id/aimTag" />
 

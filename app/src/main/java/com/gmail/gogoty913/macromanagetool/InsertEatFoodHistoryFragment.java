@@ -23,6 +23,7 @@ import com.gmail.gogoty913.macromanagetool.repository.AppRepository;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 
 /**
@@ -122,8 +123,8 @@ public class InsertEatFoodHistoryFragment extends Fragment {
 
         EatFoodsHistory eatFoodsHistory = new EatFoodsHistory();
         eatFoodsHistory.userId = AppRepository.getInstance(getContext()).getUserInfo().userId;
-        eatFoodsHistory.eatDay = new SimpleDateFormat("yyyyMMdd").format(new Date());
-        eatFoodsHistory.eatTime = new SimpleDateFormat("HHmm").format(new Date());
+        eatFoodsHistory.eatDay = new SimpleDateFormat("yyyyMMdd", Locale.JAPAN).format(new Date());
+        eatFoodsHistory.eatTime = new SimpleDateFormat("HHmm", Locale.JAPAN).format(new Date());
         TextView foodBarcodeIdView = (TextView) this.getView().findViewById(R.id.barcodeId);
         eatFoodsHistory.eatFoodId = foodBarcodeIdView.getText().toString();
         TextView eatValuePercentView = (TextView) this.getView().findViewById(R.id.inputEatValuePercent);

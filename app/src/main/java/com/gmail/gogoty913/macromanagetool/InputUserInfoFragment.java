@@ -112,8 +112,8 @@ public class InputUserInfoFragment extends Fragment {
             @Override
             protected UserInfo doInBackground(Void... userInfos) {
 
-                if(AppRepository.getInstance(getContext()).getUserInfo() == null){
-
+                if(AppRepository.getInstance(getContext()).getUserInfo() != null){
+                    return AppRepository.getInstance(getContext()).getUserInfo();
                 }
 
                 return db.userInfoDao().selectAll().get(0);
@@ -122,6 +122,7 @@ public class InputUserInfoFragment extends Fragment {
             @Override
             protected void onPostExecute(UserInfo result) {
                 super.onPostExecute(result);
+                AppRepository.getInstance(getContext()).setUserInfo(result);
 
 
             }
