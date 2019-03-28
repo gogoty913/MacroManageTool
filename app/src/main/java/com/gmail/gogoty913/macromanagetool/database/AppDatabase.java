@@ -9,7 +9,7 @@ import com.gmail.gogoty913.macromanagetool.entity.UserInfo;
 
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
-@Database(entities = {UserInfo.class, FoodInfo.class, EatFoodsHistory.class}, version = 5)
+@Database(entities = {UserInfo.class, FoodInfo.class, EatFoodsHistory.class}, version = 6)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract UserInfoDao userInfoDao();
     public abstract FoodInfoDao foodInfoDao();

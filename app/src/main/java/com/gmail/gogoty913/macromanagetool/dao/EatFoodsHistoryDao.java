@@ -5,6 +5,7 @@ import com.gmail.gogoty913.macromanagetool.entity.EatFoodsHistory;
 
 import java.util.List;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -34,6 +35,12 @@ public interface EatFoodsHistoryDao {
             )
     @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH)
     List<EatFoodInfoHistory> selectEatFoodsHistoryByDayWithFoodsInfo(String eatDay);
+
+    @Query("select * "+
+            "from EatFoodsHistory "+
+            "where eatDay = :eatDay " +
+            "order by eatTime")
+    LiveData<List<EatFoodsHistory>> selectEatFoodsHistory(String eatDay);
 
     @Insert
     void insertEatFoodsHistory(EatFoodsHistory eatFoodsHistory);
