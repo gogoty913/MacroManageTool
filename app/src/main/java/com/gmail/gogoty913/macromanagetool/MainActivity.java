@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity implements MyAppOnFragmentIn
                         Log.e("ERROR", "バーコードIDに対応する食べ物がありません");
                     }
                 }
-            };
-            asyncTask.execute(result.getContents());
+            }.execute(result.getContents());
+//            asyncTask.execute(result.getContents());
 
         } else {
             Log.e("ERROR", "バーコードIDが読み取れませんでした。");

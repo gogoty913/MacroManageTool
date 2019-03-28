@@ -120,7 +120,9 @@ public class InputFoodElementsFragment extends Fragment {
         final AsyncTask<FoodInfo, Void, Void> asyncTask = new AppAsyncTask<FoodInfo, Void, Void>(this.getActivity()) {
             @Override
             protected Void doInBackground(FoodInfo... foodInfos) {
-                db.foodInfoDao().InsertFoodsInfo(foodInfos);
+                if(db.foodInfoDao().selectFoodInfo(foodInfos[0].barcodeId) == null) {
+                    db.foodInfoDao().InsertFoodsInfo(foodInfos);
+                }
                 return null;
             }
         };

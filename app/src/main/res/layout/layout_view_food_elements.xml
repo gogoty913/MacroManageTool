@@ -27,7 +27,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/viewFoodNameTag"
+                            android:id="@+id/foodNameTag"
                             android:layout_width="120dp"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
@@ -40,7 +40,7 @@
                             android:text="@string/foodNameTag" />
 
                         <TextView
-                            android:id="@+id/viewFoodName"
+                            android:id="@+id/foodName"
                             android:layout_width="240dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -48,8 +48,8 @@
                             android:ems="10"
                             android:text="セブン　鮭おにぎり"
                             android:textSize="18sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/viewFoodNameTag"
-                            app:layout_constraintStart_toEndOf="@+id/viewFoodNameTag"/>
+                            app:layout_constraintBottom_toBottomOf="@+id/foodNameTag"
+                            app:layout_constraintStart_toEndOf="@+id/foodNameTag"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -65,7 +65,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/viewCalorieTag"
+                            android:id="@+id/calorieTag"
                             android:layout_width="120dp"
                             android:layout_height="match_parent"
                             app:autoSizeMaxTextSize="18sp"
@@ -78,7 +78,7 @@
                             android:text="@string/calorieTag" />
 
                         <TextView
-                            android:id="@+id/viewCalorie"
+                            android:id="@+id/calorie"
                             android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -86,18 +86,18 @@
                             android:ems="10"
                             android:inputType="textPersonName"
                             android:text="1,000"
-                            app:layout_constraintBottom_toBottomOf="@+id/viewCalorieTag"
-                            app:layout_constraintStart_toEndOf="@+id/viewCalorieTag"
+                            app:layout_constraintBottom_toBottomOf="@+id/calorieTag"
+                            app:layout_constraintStart_toEndOf="@+id/calorieTag"
                             />
 
                         <TextView
-                            android:id="@+id/viewCalorie_kcal"
+                            android:id="@+id/calorie_kcal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
                             android:textSize="24sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/viewCalorie"
-                            app:layout_constraintStart_toEndOf="@+id/viewCalorie"
+                            app:layout_constraintBottom_toBottomOf="@+id/calorie"
+                            app:layout_constraintStart_toEndOf="@+id/calorie"
                             style="@style/BaseTextTheme"
                             android:text="@string/kilocalorie" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -114,7 +114,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/viewLipidTag"
+                            android:id="@+id/lipidTag"
                             android:layout_width="120dp"
                             android:layout_height="match_parent"
                             app:autoSizeMaxTextSize="18sp"
@@ -127,25 +127,25 @@
                             android:text="@string/lipidTag" />
 
                         <TextView
-                            android:id="@+id/viewLipid"
+                            android:id="@+id/lipid"
                             android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
                             android:layout_marginTop="4dp"
                             android:ems="10"
                             android:text="10"
-                            app:layout_constraintBottom_toBottomOf="@+id/viewLipidTag"
-                            app:layout_constraintStart_toEndOf="@+id/viewLipidTag"
+                            app:layout_constraintBottom_toBottomOf="@+id/lipidTag"
+                            app:layout_constraintStart_toEndOf="@+id/lipidTag"
                             />
 
                         <TextView
-                            android:id="@+id/viewLipid_g"
+                            android:id="@+id/lipid_g"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
                             android:textSize="24sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/viewLipid"
-                            app:layout_constraintStart_toEndOf="@+id/viewLipid"
+                            app:layout_constraintBottom_toBottomOf="@+id/lipid"
+                            app:layout_constraintStart_toEndOf="@+id/lipid"
                             style="@style/BaseTextTheme"
                             android:text="@string/gram" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -160,7 +160,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <TextView
-                            android:id="@+id/viewProteinTag"
+                            android:id="@+id/proteinTag"
                             android:layout_width="120dp"
                             android:layout_height="match_parent"
                             app:autoSizeMaxTextSize="18sp"
@@ -173,25 +173,25 @@
                             android:text="@string/proteinTag" />
 
                         <TextView
-                            android:id="@+id/viewProtein"
+                            android:id="@+id/protein"
                             android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
                             android:layout_marginTop="4dp"
                             android:ems="10"
                             android:text="10"
-                            app:layout_constraintBottom_toBottomOf="@+id/viewProteinTag"
-                            app:layout_constraintStart_toEndOf="@+id/viewProteinTag"
+                            app:layout_constraintBottom_toBottomOf="@+id/proteinTag"
+                            app:layout_constraintStart_toEndOf="@+id/proteinTag"
                             />
 
                         <TextView
-                            android:id="@+id/viewProtein_g"
+                            android:id="@+id/protein_g"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
                             android:textSize="24sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/viewProtein"
-                            app:layout_constraintStart_toEndOf="@+id/viewProtein"
+                            app:layout_constraintBottom_toBottomOf="@+id/protein"
+                            app:layout_constraintStart_toEndOf="@+id/protein"
                             style="@style/BaseTextTheme"
                             android:text="@string/gram" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -207,7 +207,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/viewCarbohydrateTag"
+                            android:id="@+id/carbohydrateTag"
                             android:layout_width="120dp"
                             android:layout_height="match_parent"
                             app:autoSizeMaxTextSize="18sp"
@@ -219,7 +219,7 @@
                             style="@style/BaseTextTheme"
                             android:text="@string/carbohydrateTag" />
                         <TextView
-                            android:id="@+id/viewCarbohydrate"
+                            android:id="@+id/carbohydrate"
                             android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -227,16 +227,16 @@
                             android:ems="10"
                             android:inputType="textPersonName"
                             android:text="10"
-                            app:layout_constraintBottom_toBottomOf="@+id/viewCarbohydrateTag"
-                            app:layout_constraintStart_toEndOf="@+id/viewCarbohydrateTag" />
+                            app:layout_constraintBottom_toBottomOf="@+id/carbohydrateTag"
+                            app:layout_constraintStart_toEndOf="@+id/carbohydrateTag" />
                         <TextView
-                            android:id="@+id/viewCarbohydrate_g"
+                            android:id="@+id/carbohydrate_g"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
                             android:textSize="24sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/viewCarbohydrate"
-                            app:layout_constraintStart_toEndOf="@+id/viewCarbohydrate"
+                            app:layout_constraintBottom_toBottomOf="@+id/carbohydrate"
+                            app:layout_constraintStart_toEndOf="@+id/carbohydrate"
                             style="@style/BaseTextTheme"
                             android:text="@string/gram" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -251,7 +251,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/viewDisplayCapacityTag"
+                            android:id="@+id/displayCapacityTag"
                             android:layout_width="120dp"
                             android:layout_height="match_parent"
                             app:autoSizeMaxTextSize="18sp"
@@ -263,23 +263,23 @@
                             style="@style/BaseTextTheme"
                             android:text="@string/displayCapacityTag" />
                         <TextView
-                            android:id="@+id/viewDisplayCapacity"
+                            android:id="@+id/displayCapacity"
                             android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
                             android:layout_marginTop="4dp"
                             android:ems="10"
                             android:text="10"
-                            app:layout_constraintBottom_toBottomOf="@+id/viewDisplayCapacityTag"
-                            app:layout_constraintStart_toEndOf="@+id/viewDisplayCapacityTag" />
+                            app:layout_constraintBottom_toBottomOf="@+id/displayCapacityTag"
+                            app:layout_constraintStart_toEndOf="@+id/displayCapacityTag" />
                         <TextView
-                            android:id="@+id/viewDisplayCapacity_g"
+                            android:id="@+id/displayCapacity_g"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
                             android:textSize="24sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/viewDisplayCapacity"
-                            app:layout_constraintStart_toEndOf="@+id/viewDisplayCapacity"
+                            app:layout_constraintBottom_toBottomOf="@+id/displayCapacity"
+                            app:layout_constraintStart_toEndOf="@+id/displayCapacity"
                             style="@style/BaseTextTheme"
                             android:text="@string/gram" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -294,7 +294,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/viewAllCapacityTag"
+                            android:id="@+id/allCapacityTag"
                             android:layout_width="120dp"
                             android:layout_height="match_parent"
                             app:autoSizeMaxTextSize="18sp"
@@ -306,7 +306,7 @@
                             style="@style/BaseTextTheme"
                             android:text="@string/allCapacityTag" />
                         <TextView
-                            android:id="@+id/viewAllCapacity"
+                            android:id="@+id/allCapacity"
                             android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -314,16 +314,16 @@
                             android:ems="10"
                             android:inputType="textPersonName"
                             android:text="10"
-                            app:layout_constraintBottom_toBottomOf="@+id/viewAllCapacityTag"
-                            app:layout_constraintStart_toEndOf="@+id/viewAllCapacityTag" />
+                            app:layout_constraintBottom_toBottomOf="@+id/allCapacityTag"
+                            app:layout_constraintStart_toEndOf="@+id/allCapacityTag" />
                         <TextView
-                            android:id="@+id/viewAllCapacity_g"
+                            android:id="@+id/allCapacity_g"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
                             android:textSize="24sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/viewAllCapacity"
-                            app:layout_constraintStart_toEndOf="@+id/viewAllCapacity"
+                            app:layout_constraintBottom_toBottomOf="@+id/allCapacity"
+                            app:layout_constraintStart_toEndOf="@+id/allCapacity"
                             style="@style/BaseTextTheme"
                             android:text="@string/gram" />
                     </androidx.constraintlayout.widget.ConstraintLayout>

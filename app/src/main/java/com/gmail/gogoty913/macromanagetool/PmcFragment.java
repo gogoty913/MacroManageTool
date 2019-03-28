@@ -120,6 +120,8 @@ public class PmcFragment extends Fragment {
                     if (activity != null) {
 
                         UserInfo userInfo =AppRepository.getInstance(getContext()).getUserInfo();
+                        TextView nickNameView = (TextView) activity.findViewById(R.id.nickName);
+                        nickNameView.setText(userInfo.nickname);
                         TextView calorieView = (TextView) activity.findViewById(R.id.aimCalorie);
                         calorieView.setText(Float.toString(userInfo.allCalorie));
                         TextView carbohydratesView = (TextView) activity.findViewById(R.id.aimCarbohydrates);
@@ -129,7 +131,7 @@ public class PmcFragment extends Fragment {
                         TextView lipidView = (TextView) activity.findViewById(R.id.aimLipid);
                         lipidView.setText(Float.toString(userInfo.aimLipid));
 
-                        if (resultList != null && !resultList.isEmpty()) {
+                        if (resultList != null) {
                             float intakeCalorie = (float)PmcLogic.intakeCalorie(resultList);
                             float intakeCarbon = (float)PmcLogic.intakeCarbon(resultList);
                             float intakeProtein = (float)PmcLogic.intakeProtein(resultList);
