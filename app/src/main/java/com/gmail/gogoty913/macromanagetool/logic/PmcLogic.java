@@ -80,9 +80,9 @@ public class PmcLogic {
         userInfo.aimCarbohydrate = calculateAimCarbohydrate(userInfo);
     }
 
-    public static double intakeValue(List<EatFoodsHistory> eatFoodsHistoryList, FoodInfo foodInfo) {
-        return eatFoodsHistoryList.stream().mapToDouble(h ->
-                h.eatValueGram == 0 ? h.eatValuePercent : h.eatValueGram / foodInfo.allCapacity).sum();
+    public static double intakeValue(EatFoodsHistory eatFoodsHistoryList, FoodInfo foodInfo) {
+        return
+                eatFoodsHistoryList.eatValueGram == 0 ? eatFoodsHistoryList.eatValuePercent : eatFoodsHistoryList.eatValueGram / foodInfo.allCapacity;
     }
 
     public static double intakeCalorie(@NonNull List<EatFoodInfoHistory> resultList) {

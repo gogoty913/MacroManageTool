@@ -13,7 +13,6 @@ import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(primaryKeys = {"userId", "eatDay","eatTime"},
-        foreignKeys = @ForeignKey(entity = FoodInfo.class,parentColumns = "barcodeId",childColumns = "eatFoodId"),
         indices = @Index("eatFoodId"))
 public class EatFoodsHistory {
 
