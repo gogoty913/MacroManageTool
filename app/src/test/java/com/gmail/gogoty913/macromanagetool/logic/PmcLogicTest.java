@@ -15,17 +15,15 @@ import static org.junit.Assert.*;
 
 public class PmcLogicTest {
 
-    List<EatFoodInfoHistory> eatFoodInfoHistoryList;
     EatFoodInfoHistory eatFoodInfoHistory;
+    List<EatFoodInfoHistory> eatFoodInfoHistoryList;
 
     @Before
     public void before(){
         eatFoodInfoHistory = new EatFoodInfoHistory();
-        eatFoodInfoHistoryList = new ArrayList<>();
-
-        eatFoodInfoHistory.eatFoodsHistory = new ArrayList<EatFoodsHistory>();
+        eatFoodInfoHistoryList = new ArrayList<EatFoodInfoHistory>();
         eatFoodInfoHistory.foodInfo = new FoodInfo();
-        eatFoodInfoHistory.eatFoodsHistory.add(new EatFoodsHistory());
+        eatFoodInfoHistory.eatFoodsHistory = new EatFoodsHistory();
 
     }
 
@@ -33,21 +31,32 @@ public class PmcLogicTest {
     @Test
     public void intakeCalorie() {
 
-        eatFoodInfoHistory.foodInfo.calorie = 100;
-        eatFoodInfoHistory.foodInfo.displayCapacity = 100;
-        eatFoodInfoHistory.foodInfo.allCapacity = 100;
-        eatFoodInfoHistory.eatFoodsHistory.get(0).eatValuePercent = 1;
-        eatFoodInfoHistory.eatFoodsHistory.add(new EatFoodsHistory());
-        eatFoodInfoHistory.eatFoodsHistory.get(1).eatValuePercent = 1;
+        eatFoodInfoHistory.foodInfo.calorie = 153;
+        eatFoodInfoHistory.foodInfo.displayCapacity = 41;
+        eatFoodInfoHistory.foodInfo.allCapacity = 41;
+        eatFoodInfoHistory.eatFoodsHistory.eatValuePercent = 4;
+
         eatFoodInfoHistoryList.add(eatFoodInfoHistory);
         eatFoodInfoHistoryList.add(eatFoodInfoHistory);
+
         double intakeCalorie = PmcLogic.intakeCalorie(eatFoodInfoHistoryList);
 
-        assertThat(intakeCalorie,is(400.0));
+        assertThat(intakeCalorie,is(153d/41d*0.04*41d*2d));
     }
 
     @Test
-    public void intakeCarbon() {
+    public void intakeCalorie2() {
+
+        eatFoodInfoHistory.foodInfo.calorie = 153;
+        eatFoodInfoHistory.foodInfo.displayCapacity = 41;
+        eatFoodInfoHistory.foodInfo.allCapacity = 41;
+        eatFoodInfoHistory.eatFoodsHistory.eatValueGram = 2;
+
+        eatFoodInfoHistoryList.add(eatFoodInfoHistory);
+
+        double intakeCalorie = PmcLogic.intakeCalorie(eatFoodInfoHistoryList);
+
+        assertThat(intakeCalorie,is(153d/41d*2d));
     }
 
     @Test
