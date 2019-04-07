@@ -8,10 +8,10 @@ import androidx.room.Relation;
 public class EatFoodInfoHistory {
 
     @Embedded
-    public FoodInfo foodInfo;
+    public EatFoodsHistory eatFoodsHistory;
 
-    @Relation(parentColumn = "barcodeId", entityColumn = "eatFoodId")
-    public List<EatFoodsHistory> eatFoodsHistory;
+    @Embedded
+    public FoodInfo foodInfo;
 
 
 }

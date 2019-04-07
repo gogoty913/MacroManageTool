@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements MyAppOnFragmentIn
 
         fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragmentMainDisplay, InputFoodElementsFragment.newInstance("", ""));
+        fragmentTransaction.replace(R.id.fragmentMainDisplay, PmcFragment.newInstance("", ""));
         fragmentTransaction.commit();
     }
 

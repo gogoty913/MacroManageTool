@@ -80,37 +80,39 @@ public class PmcLogic {
         userInfo.aimCarbohydrate = calculateAimCarbohydrate(userInfo);
     }
 
-    public static double intakeValue(List<EatFoodsHistory> eatFoodsHistoryList, FoodInfo foodInfo) {
-        return eatFoodsHistoryList.stream().mapToDouble(h ->
-                h.eatValueGram == 0 ? h.eatValuePercent : h.eatValueGram / foodInfo.allCapacity).sum();
+    public static double intakeValue(EatFoodsHistory eatFoodsHistoryList, FoodInfo foodInfo) {
+
+        double result = eatFoodsHistoryList.eatValueGram == 0 ? eatFoodsHistoryList.eatValuePercent/100d * foodInfo.allCapacity : eatFoodsHistoryList.eatValueGram ;
+        return result;
+
     }
 
     public static double intakeCalorie(@NonNull List<EatFoodInfoHistory> resultList) {
-        return resultList.stream().mapToDouble(u -> (
+        return resultList.stream().mapToDouble(u ->
                 u.foodInfo.calorie / u.foodInfo.displayCapacity
                         * intakeValue(u.eatFoodsHistory, u.foodInfo)
-        ) * u.foodInfo.allCapacity).sum();
+        ).sum();
 
     }
 
     public static double intakeCarbon(@NonNull List<EatFoodInfoHistory> resultList) {
-        return resultList.stream().mapToDouble(u -> (
+        return resultList.stream().mapToDouble(u ->
                 u.foodInfo.carbohydrate / u.foodInfo.displayCapacity
                         * intakeValue(u.eatFoodsHistory, u.foodInfo)
-        ) * u.foodInfo.allCapacity).sum();
+        ).sum();
     }
 
     public static double intakeProtein(@NonNull List<EatFoodInfoHistory> resultList) {
-        return resultList.stream().mapToDouble(u -> (
+        return resultList.stream().mapToDouble(u ->
                 u.foodInfo.protein / u.foodInfo.displayCapacity
                         * intakeValue(u.eatFoodsHistory, u.foodInfo)
-        ) * u.foodInfo.allCapacity).sum();
+        ).sum();
     }
 
     public static double intakeLipid(@NonNull List<EatFoodInfoHistory> resultList) {
-        return resultList.stream().mapToDouble(u -> (
+        return resultList.stream().mapToDouble(u ->
                 u.foodInfo.lipid / u.foodInfo.displayCapacity
                         * intakeValue(u.eatFoodsHistory, u.foodInfo)
-        ) * u.foodInfo.allCapacity).sum();
+        ).sum();
     }
 }

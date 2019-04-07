@@ -130,7 +130,7 @@ public class InsertEatFoodHistoryFragment extends Fragment {
         TextView eatValuePercentView = (TextView) this.getView().findViewById(R.id.inputEatValuePercent);
         TextView eatValueGramView = (TextView) this.getView().findViewById(R.id.inputEatValueGram);
         if(!eatValuePercentView.getText().toString().isEmpty()) {
-            eatFoodsHistory.eatValuePercent = Integer.parseInt(eatValuePercentView.getText().toString())/100;
+            eatFoodsHistory.eatValuePercent = Integer.parseInt(eatValuePercentView.getText().toString());
         }else {
             eatFoodsHistory.eatValueGram = Integer.parseInt(eatValueGramView.getText().toString());
         }
