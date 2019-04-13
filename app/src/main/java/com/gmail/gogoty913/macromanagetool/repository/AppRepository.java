@@ -47,7 +47,7 @@ public class AppRepository {
     public UserInfo getUserInfo(){return userInfo;}
 
 
-    public LiveData<List<EatFoodsHistory>> getEatFoodsHistoryList(String eatDay) {
+    public LiveData<List<EatFoodInfoHistory>> getEatFoodsHistoryList(String eatDay) {
         return db.eatFoodsHistoryDao().selectEatFoodsHistory(eatDay);
     }
 

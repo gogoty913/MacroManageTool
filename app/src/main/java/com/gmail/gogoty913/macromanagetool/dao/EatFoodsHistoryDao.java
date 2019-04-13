@@ -36,11 +36,15 @@ public interface EatFoodsHistoryDao {
     @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH)
     List<EatFoodInfoHistory> selectEatFoodsHistoryByDayWithFoodsInfo(String eatDay);
 
+    @Transaction
     @Query("select * "+
-            "from EatFoodsHistory "+
-            "where eatDay = :eatDay " +
-            "order by eatTime")
-    LiveData<List<EatFoodsHistory>> selectEatFoodsHistory(String eatDay);
+            "from EatFoodsHistory as history "+
+            "inner join FoodInfo as info on history.eatFoodId = info.barcodeId " +
+            "where history.eatDay = :eatDay " +
+            "order by eatTime"
+    )
+    @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH)
+    LiveData<List<EatFoodInfoHistory>> selectEatFoodsHistory(String eatDay);
 
     @Insert
     void insertEatFoodsHistory(EatFoodsHistory eatFoodsHistory);

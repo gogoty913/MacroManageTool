@@ -114,6 +114,7 @@ public class PmcFragment extends Fragment {
 
             @Override
             protected void onPostExecute(List<EatFoodInfoHistory> resultList) {
+
                 super.onPostExecute(resultList);
                 if (AppRepository.getInstance(getContext()).getUserInfo() != null) {
                     Activity activity = activityWeakReference.get();

@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 import com.gmail.gogoty913.macromanagetool.database.AppDatabase;
@@ -116,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements MyAppOnFragmentIn
     void selectFoodButton(){
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.replace(R.id.fragmentMainDisplay,SelectFoodElementsFragment.newInstance("",""));
+        fragmentTransaction.replace(R.id.fragmentMainDisplay,EatFoodHistoryListFragment.newInstance());
         fragmentTransaction.commit();
     }
 
@@ -134,5 +136,12 @@ public class MainActivity extends AppCompatActivity implements MyAppOnFragmentIn
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.replace(R.id.fragmentMainDisplay, InputUserInfoFragment.newInstance("", ""));
         fragmentTransaction.commit();
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event){
+        InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        return false;
     }
 }
