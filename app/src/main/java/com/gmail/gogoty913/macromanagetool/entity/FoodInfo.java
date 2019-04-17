@@ -38,9 +38,9 @@ public class FoodInfo {
     public double carbohydrate;
 
     @ColumnInfo
-    public int displayCapacity;
+    public double displayCapacity;
 
     @ColumnInfo
-    public int allCapacity;
+    public double allCapacity;
 
 }

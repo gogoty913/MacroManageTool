@@ -114,11 +114,19 @@ public class MainActivity extends AppCompatActivity implements MyAppOnFragmentIn
         fragmentTransaction.commit();
     }
 
+    @OnClick(R.id.selectEatHistoryButton)
+    void selectEatHistoryButton(){
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.replace(R.id.fragmentMainDisplay,EatFoodHistoryListFragment.newInstance());
+        fragmentTransaction.commit();
+    }
+
     @OnClick(R.id.selectFoodButton)
     void selectFoodButton(){
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.replace(R.id.fragmentMainDisplay,EatFoodHistoryListFragment.newInstance());
+        fragmentTransaction.replace(R.id.fragmentMainDisplay,FoodInfoListFragment.newInstance());
         fragmentTransaction.commit();
     }
 

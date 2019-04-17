@@ -47,6 +47,15 @@
                 app:layout_constraintStart_toEndOf="@+id/selectFoodButton" />
 
             <ImageButton
+                android:id="@+id/selectEatHistoryButton"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_menu_recent_history"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/selectFoodButton" />
+
+            <ImageButton
                 android:id="@+id/selectFoodButton"
                 android:layout_width="match_parent"
                 android:layout_weight="1"

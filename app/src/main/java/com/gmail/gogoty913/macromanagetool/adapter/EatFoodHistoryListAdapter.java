@@ -4,7 +4,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.gmail.gogoty913.macromanagetool.R;
-import com.gmail.gogoty913.macromanagetool.databinding.FoodListInfoBinding;
+import com.gmail.gogoty913.macromanagetool.databinding.EatFoodListInfoBinding;
 import com.gmail.gogoty913.macromanagetool.entity.EatFoodInfoHistory;
 
 import java.util.List;
@@ -72,8 +72,8 @@ public class EatFoodHistoryListAdapter extends RecyclerView.Adapter<EatFoodHisto
     @Override
     public EatFoodHistoryHolder onCreateViewHolder(ViewGroup viewGroup,int viewType){
 
-        FoodListInfoBinding binding = DataBindingUtil
-                .inflate(LayoutInflater.from(viewGroup.getContext()), R.layout.food_list_info, viewGroup, false);
+        EatFoodListInfoBinding binding = DataBindingUtil
+                .inflate(LayoutInflater.from(viewGroup.getContext()), R.layout.eat_food_list_info, viewGroup, false);
 
         return new EatFoodHistoryHolder(binding);
     }
@@ -93,9 +93,9 @@ public class EatFoodHistoryListAdapter extends RecyclerView.Adapter<EatFoodHisto
 
     static class EatFoodHistoryHolder extends RecyclerView.ViewHolder{
 
-        FoodListInfoBinding binding;
+        EatFoodListInfoBinding binding;
 
-        public EatFoodHistoryHolder(FoodListInfoBinding binding){
+        public EatFoodHistoryHolder(EatFoodListInfoBinding binding){
             super(binding.getRoot());
             this.binding = binding;
 

@@ -1,5 +1,6 @@
 package com.gmail.gogoty913.macromanagetool;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -85,6 +86,13 @@ public class InsertEatFoodHistoryFragment extends Fragment {
         ButterKnife.bind(this,resultView);
         resultView.findViewById(R.id.insertFoodAndEatButton).setVisibility(View.GONE);
         resultView.findViewById(R.id.insertFoodButton).setVisibility(View.GONE);
+
+        String barcodeId = mParam1;
+        if(barcodeId !=null && !barcodeId.isEmpty()){
+            selectFoodInfo(resultView,barcodeId);
+        }
+
+
         return resultView;
     }
 
@@ -145,5 +153,47 @@ public class InsertEatFoodHistoryFragment extends Fragment {
         };
 
         asyncTask.execute(eatFoodsHistory);
+    }
+
+    private void selectFoodInfo(View view,String barcodeId){
+        TextView barcodeIdView = (TextView) view.findViewById(R.id.barcodeId);
+        barcodeIdView.setText(barcodeId);
+
+        AppDatabase db = AppRepository.getInstance(getContext()).getDb();
+        final AsyncTask<String, Void, FoodInfo> asyncTask = new AppAsyncTask<String, Void, FoodInfo>(this.getActivity()) {
+            @Override
+            protected FoodInfo doInBackground(String... objects) {
+                return db.foodInfoDao().selectFoodInfo(objects[0]);
+            }
+
+            @Override
+            protected void onPostExecute(FoodInfo result) {
+                super.onPostExecute(result);
+                if (result != null) {
+                    Activity activity = activityWeakReference.get();
+                    if (activity != null) {
+
+                        TextView foodNameView = (TextView) activity.findViewById(R.id.foodName);
+                        foodNameView.setText(result.foodName);
+                        TextView foodCalorieView = (TextView) activity.findViewById(R.id.calorie);
+                        foodCalorieView.setText(String.valueOf(result.calorie));
+                        TextView foodLipidView = (TextView) activity.findViewById(R.id.lipid);
+                        foodLipidView.setText(String.valueOf(result.lipid));
+                        TextView foodProteinView = (TextView) activity.findViewById(R.id.protein);
+                        foodProteinView.setText(String.valueOf(result.protein));
+                        TextView foodCarbohydrateView = (TextView) activity.findViewById(R.id.carbohydrate);
+                        foodCarbohydrateView.setText(String.valueOf(result.carbohydrate));
+                        TextView foodAllCapacityView = (TextView) activity.findViewById(R.id.allCapacity);
+                        foodAllCapacityView.setText(String.valueOf(result.allCapacity));
+                        TextView foodDisplayCapacityView = (TextView) activity.findViewById(R.id.displayCapacity);
+                        foodDisplayCapacityView.setText(String.valueOf(result.displayCapacity));
+                    } else {
+                        Log.e("ERROR", "Activityが取得できません");
+                    }
+                } else {
+                    Log.e("ERROR", "バーコードIDに対応する食べ物がありません");
+                }
+            }
+        }.execute(barcodeId);
     }
 }

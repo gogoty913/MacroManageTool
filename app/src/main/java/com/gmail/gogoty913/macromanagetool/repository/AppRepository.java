@@ -51,6 +51,11 @@ public class AppRepository {
         return db.eatFoodsHistoryDao().selectEatFoodsHistory(eatDay);
     }
 
+    public LiveData<List<FoodInfo>> getFoodInfoList(){
+        return db.foodInfoDao().selectFoodInfoList();
+    }
+
+
     public LiveData<FoodInfo> getFoodInfo(String foodId){
         return db.foodInfoDao().selectFoodInfoLive(foodId);
     }

@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -92,42 +93,22 @@ public class InputFoodElementsFragment extends Fragment {
         onButtonPressed(Uri.EMPTY);
     }
 
+    @OnClick(R.id.insertFoodAndEatButton)
+    void clickInsertAndEatFoodButton() {
+
+        FoodInfo foodInfo = insertFood();
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.replace(R.id.fragmentMainDisplay,InsertEatFoodHistoryFragment.newInstance(foodInfo.barcodeId,""));
+        fragmentTransaction.commit();
+
+
+    }
+
     @OnClick(R.id.insertFoodButton)
     void clickInsertFoodButton() {
 
-        FoodInfo foodInfo = new FoodInfo();
-        TextView foodBarcodeIdView = (TextView) this.getView().findViewById(R.id.barcodeId);
-        foodInfo.barcodeId = foodBarcodeIdView.getText().toString();
-        TextView foodNameView = (TextView) this.getView().findViewById(R.id.foodName);
-        foodInfo.foodName = foodNameView.getText().toString();
-        TextView foodCalorieView = (TextView) this.getView().findViewById(R.id.calorie);
-        foodInfo.calorie = Double.valueOf(foodCalorieView.getText().toString());
-        TextView foodLipidView = (TextView) this.getView().findViewById(R.id.lipid);
-        foodInfo.lipid = Double.valueOf(foodLipidView.getText().toString());
-        TextView foodProteinView = (TextView) this.getView().findViewById(R.id.protein);
-        foodInfo.protein = Double.valueOf(foodProteinView.getText().toString());
-        TextView foodCarbohydrateView = (TextView) this.getView().findViewById(R.id.carbohydrate);
-        foodInfo.carbohydrate = Double.valueOf(foodCarbohydrateView.getText().toString());
-        TextView foodAllCapacityView = (TextView) this.getView().findViewById(R.id.allCapacity);
-        foodInfo.allCapacity = Integer.valueOf(foodAllCapacityView.getText().toString());
-        TextView foodDisplayCapacityView = (TextView) this.getView().findViewById(R.id.displayCapacity);
-        foodInfo.displayCapacity = Integer.valueOf(foodDisplayCapacityView.getText().toString());
-
-        Log.i("INFO", foodInfo.foodName);
-
-        AppDatabase db = AppRepository.getInstance(getContext()).getDb();
-
-        final AsyncTask<FoodInfo, Void, Void> asyncTask = new AppAsyncTask<FoodInfo, Void, Void>(this.getActivity()) {
-            @Override
-            protected Void doInBackground(FoodInfo... foodInfos) {
-                if(db.foodInfoDao().selectFoodInfo(foodInfos[0].barcodeId) == null) {
-                    db.foodInfoDao().InsertFoodsInfo(foodInfos);
-                }
-                return null;
-            }
-        };
-
-        asyncTask.execute(foodInfo);
+        insertFood();
 
     }
 
@@ -153,5 +134,43 @@ public class InputFoodElementsFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    private FoodInfo insertFood(){
+        FoodInfo foodInfo = new FoodInfo();
+        TextView foodBarcodeIdView = (TextView) this.getView().findViewById(R.id.barcodeId);
+        foodInfo.barcodeId = foodBarcodeIdView.getText().toString();
+        TextView foodNameView = (TextView) this.getView().findViewById(R.id.foodName);
+        foodInfo.foodName = foodNameView.getText().toString();
+        TextView foodCalorieView = (TextView) this.getView().findViewById(R.id.calorie);
+        foodInfo.calorie = Double.valueOf(foodCalorieView.getText().toString());
+        TextView foodLipidView = (TextView) this.getView().findViewById(R.id.lipid);
+        foodInfo.lipid = Double.valueOf(foodLipidView.getText().toString());
+        TextView foodProteinView = (TextView) this.getView().findViewById(R.id.protein);
+        foodInfo.protein = Double.valueOf(foodProteinView.getText().toString());
+        TextView foodCarbohydrateView = (TextView) this.getView().findViewById(R.id.carbohydrate);
+        foodInfo.carbohydrate = Double.valueOf(foodCarbohydrateView.getText().toString());
+        TextView foodAllCapacityView = (TextView) this.getView().findViewById(R.id.allCapacity);
+        foodInfo.allCapacity = Double.valueOf(foodAllCapacityView.getText().toString());
+        TextView foodDisplayCapacityView = (TextView) this.getView().findViewById(R.id.displayCapacity);
+        foodInfo.displayCapacity = Double.valueOf(foodDisplayCapacityView.getText().toString());
+
+        Log.i("INFO", foodInfo.foodName);
+
+        AppDatabase db = AppRepository.getInstance(getContext()).getDb();
+
+        final AsyncTask<FoodInfo, Void, Void> asyncTask = new AppAsyncTask<FoodInfo, Void, Void>(this.getActivity()) {
+            @Override
+            protected Void doInBackground(FoodInfo... foodInfos) {
+                if(db.foodInfoDao().selectFoodInfo(foodInfos[0].barcodeId) == null) {
+                    db.foodInfoDao().InsertFoodsInfo(foodInfos);
+                }
+                return null;
+            }
+        };
+
+        asyncTask.execute(foodInfo);
+
+        return foodInfo;
     }
 }
