@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import com.gmail.gogoty913.macromanagetool.adapter.EatFoodHistoryListAdapter;
 import com.gmail.gogoty913.macromanagetool.databinding.FragmentEatFoodHistoryListBinding;
 import com.gmail.gogoty913.macromanagetool.entity.EatFoodInfoHistory;
-import com.gmail.gogoty913.macromanagetool.entity.EatFoodsHistory;
+import com.gmail.gogoty913.macromanagetool.viewModel.EatFoodHistoryListViewModel;
 
 import java.util.List;
 

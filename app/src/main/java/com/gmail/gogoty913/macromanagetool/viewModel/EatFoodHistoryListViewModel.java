@@ -1,4 +1,4 @@
-package com.gmail.gogoty913.macromanagetool;
+package com.gmail.gogoty913.macromanagetool.viewModel;
 
 import android.app.Application;
 

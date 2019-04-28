@@ -145,11 +145,4 @@ public class MainActivity extends AppCompatActivity implements MyAppOnFragmentIn
         fragmentTransaction.replace(R.id.fragmentMainDisplay, InputUserInfoFragment.newInstance("", ""));
         fragmentTransaction.commit();
     }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event){
-        InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
-        inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-        return false;
-    }
 }

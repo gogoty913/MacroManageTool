@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.gmail.gogoty913.macromanagetool.R;
+import com.gmail.gogoty913.macromanagetool.callback.FoodInfoCardCallBack;
 import com.gmail.gogoty913.macromanagetool.databinding.EatFoodListInfoBinding;
 import com.gmail.gogoty913.macromanagetool.databinding.FoodInfoListBinding;
 import com.gmail.gogoty913.macromanagetool.entity.FoodInfo;
@@ -11,6 +12,7 @@ import com.gmail.gogoty913.macromanagetool.entity.FoodInfo;
 import java.util.List;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,6 +20,14 @@ import androidx.recyclerview.widget.RecyclerView;
 public class FoodInfoListAdapter extends RecyclerView.Adapter<FoodInfoListAdapter.FoodInfoHolder> {
 
     List<? extends FoodInfo> foodInfoList;
+
+    @Nullable
+    FoodInfoCardCallBack foodInfoCardCallBack;
+
+    public FoodInfoListAdapter(FoodInfoCardCallBack foodInfoCardCallBack){
+        this.foodInfoCardCallBack = foodInfoCardCallBack;
+    }
+
 
 
     public void setFoodInfoList(List<FoodInfo> foodInfoList) {
@@ -75,6 +85,7 @@ public class FoodInfoListAdapter extends RecyclerView.Adapter<FoodInfoListAdapte
         FoodInfoListBinding binding = DataBindingUtil
                 .inflate(LayoutInflater.from(viewGroup.getContext()), R.layout.food_info_list, viewGroup, false);
 
+        binding.setCallback(foodInfoCardCallBack);
         return new FoodInfoListAdapter.FoodInfoHolder(binding);
     }
 
